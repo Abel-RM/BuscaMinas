@@ -1,13 +1,14 @@
 import java.util.regex.Pattern;
 
 public class Juego {
+    static Jugador jugador;
+    static Dificultad dificultad = Dificultad.PRINCIPIANTE;
+    static Tablero tablero;
+    static long horaInicio;
+    static long horaFin;
     public static void main(String[] args) {
 
-        Jugador jugador;
-        Dificultad dificultad = Dificultad.PRINCIPIANTE;
-        Celda[][] tablero;
-        long horaInicio;
-        long horaFin;
+
 
         //leer y validar la entrada del nombre
         String valorTemp = "";
@@ -21,10 +22,10 @@ public class Juego {
         regexp = "[1-4]";
         do {
             System.out.println("Escoge la dificultad:");
-            System.out.println("PRINCIPIANTE:1");
-            System.out.println("BASICO:\t\t 2");
-            System.out.println("MEDIO:\t\t 3");
-            System.out.println("AVANZADO:\t 4");
+            System.out.println(Dificultad.PRINCIPIANTE+":1");
+            System.out.println(Dificultad.BASICO+"\t\t:2");
+            System.out.println(Dificultad.MEDIO+"\t\t:3");
+            System.out.println(Dificultad.AVANZADO+"\t:4");
             valorTemp = Keyboard.readString();
         }while(!Pattern.matches(regexp, valorTemp));
 
@@ -43,14 +44,10 @@ public class Juego {
                 break;
         }
 
-        tablero = crearTablero(dificultad);
-        
+
 
     }
 
-    private static Celda[][] crearTablero(Dificultad dif){
-        return new Celda[1][1] ;
-    }
 
     private void calcularTiempo(){
         long TInicio, TFin, tiempo; //Variables para determinar el tiempo de ejecución
