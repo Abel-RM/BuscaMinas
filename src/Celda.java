@@ -1,10 +1,33 @@
 public class Celda {
-    private int numero;
-    private Estado estado;
+    private int numero = 0;
+    private Estado estado = Estado.CERRADA;
+    private boolean mina;
 
-    public Celda(int numero, Estado estado) {
-        this.numero = numero;
-        this.estado = estado;
+
+    public Celda() {
+    }
+
+    @Override
+    public String toString(){
+        switch (estado){
+            case ABIERTA:
+                return String.valueOf(numero);
+            case CERRADA:
+                return "C";
+            case MARCADA:
+                return "M";
+            case BLOQUEADA:
+                return "B";
+            default:return "";
+        }
+    }
+
+    public boolean isMina() {
+        return mina;
+    }
+
+    public void setMina() {
+        this.mina = true;
     }
 
     public int getNumero() {
