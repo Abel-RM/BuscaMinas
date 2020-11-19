@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="281.0" y="0.0">Tablero</node>
+    <node x="0.0" y="0.0">Keyboard</node>
+    <node x="527.0" y="562.0">Celda</node>
+    <node x="705.0" y="562.0">Dificultad</node>
+    <node x="228.0" y="562.0">Juego</node>
+    <node x="0.0" y="562.0">Jugador</node>
+    <node x="574.0" y="0.0">Estado</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.1830769230769231" x="629.7908912733608" y="941.4245822774787" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
