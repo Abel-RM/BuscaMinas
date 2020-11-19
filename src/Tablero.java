@@ -18,6 +18,7 @@ public class Tablero {
         colocarMinas(cantidadMinas,0);
     }
 
+    //regresa true si todas las celdas que no son minas fueron abiertas
     public boolean celdasAbiertas(){
         int count = 0;
         for (int i =0;i<tamaño;i++){
@@ -32,11 +33,12 @@ public class Tablero {
             return false;
     }
 
+    //regresa el estado actual del tablero
     public boolean getEstadotablero() {
         return estadotablero;
     }
 
-    //regresa el estado actual del tablero
+
     @Override
     public String toString(){
         String res = "";
@@ -54,7 +56,7 @@ public class Tablero {
     public int getTamaño() {
         return tamaño;
     }
-
+    //muestra el tablero indicando donde hay minas
     public String mostrarTableroReal(){
         String res = "";
         for (int i =0;i<celdas.length;i++){
@@ -167,6 +169,7 @@ public class Tablero {
         return false;
     }
 
+    //abre las celdas vecinas de una celda
     private void abrirVecinas(int x,int y,int x2,int y2){
         if (x2 != tamaño && y2 != tamaño){
             if (isVecina(x,y,x2,y2)){
